@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pokemon</title>
+        <link rel="stylesheet" type="text/css" href="pokemon.css">
+        <script type="text/javascript" src="pokemon.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="title">
+                <img src="https://sporadic.nz/pokesignment/img/logo.svg" alt="pokemon-logo" id="pokeLogo">
+            </div>
+            <div id="nav">
+                <a href="https://www.pokemon.com/us/" id="home"><p>Home</p></a>
+                <div id="rightNav">
+                    <p id="navRandom">Load Random Pokemon</p>
+                    <p id="navDay">Show Pokemon of the Day</p>
+                    <p id="navShowList">Show Pokemon List</p>
+                </div>
+                <img src="../../../../spec/hamburger-menu-icon-svg-16.jpg" alt="hamburger" id="hamburger">
+            </div>
+        </header>
+
+        <div id="content">
+            <div id="leftColumn" class="column">
+                <h1 class="heading" id="menu">Menu</h1>
+                <button type="button" id="random" class="button">Load Random Pokemon</button>
+                <button type="button" id="showList" class="button">Show List of Pokemon</button>
+            </div>
+            <div id="centerColumn" class="column">
+                <h1 class="heading" id="details">Pokemon Details</h1>
+                <div id="pokemonDetails" class="pokemonList"></div>
+            </div>
+            <div id="rightColumn" class="column">
+                <h1 class="heading" id="day">Pokemon of the Day</h1>
+                <div id="pokemonOfTheDay"></div>
+                <button type="button" id="showDetails" class="button">Show Details</button>
+            </div>
+        </div>
+    </body>
+</html>

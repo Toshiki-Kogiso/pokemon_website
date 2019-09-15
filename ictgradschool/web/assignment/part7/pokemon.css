@@ -1,0 +1,204 @@
+:root {
+    --nav-col-bg: #46ACC2;
+    --nav-col-fg: #FFFFFF;
+    --border-rad: 0.25em;
+    --font-stack: Calibri, 'Open Sans', sans-serif;
+    --pane-pad: 0.25em;
+    --pane-margin: 0.25em;
+    --temp-bg-red: lightcoral;
+    --temp-bg-blue: lightblue;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#title {
+    background-color: rgba(255, 16, 14, 0.75);
+}
+
+#pokeLogo {
+    display: block;
+    margin: auto;
+}
+
+#nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav p {
+    margin: 10px;
+}
+
+#nav a {
+    text-decoration: none;
+}
+
+#home {
+    font-size: larger;
+    color: white;
+}
+
+#rightNav, .pokemonList, #extraInfo {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#rightNav {
+    font-size: smaller;
+}
+
+.column {
+    background-color: cornflowerblue;
+}
+
+#details {
+    font-size: 20px;
+}
+
+#menu, #day {
+    font-size: 16px;
+}
+
+#content {
+    width: 82%;
+    margin: 5px auto 5px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-column-gap: 8px;
+}
+
+#centerColumn, #rightColumn, #leftColumn, #pokemonOfTheDay, .pokemon, #pokemonDetails > div, .extraInfoDivs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hamburger {
+    display: none;
+    height: 40px;
+    margin: 5px;
+}
+
+#pokemonOfTheDay > img {
+    width: 180px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+#pokemonOfTheDay > p, .extraInfoDivs > p {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.pokemonList {
+    flex-wrap: wrap;
+}
+
+.pokemon {
+    background-color: #0351ff;
+    margin: 5px;
+    box-shadow: #032c86 5px 5px;
+}
+
+.pokemon > img {
+    width: 130px;
+}
+
+.chosenPokemon {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+#mainPokemon {
+    height: 350px;
+}
+
+#pokemonDetails p {
+    font-size: 12px;
+}
+
+#pokemonDetails > div, .heading, .button {
+    padding: 5px;
+}
+
+.extraInfoDivs, #extraInfo {
+    border: darkblue solid 3px;
+    margin: 5px;
+}
+
+#extraInfo {
+    width: 95%;
+    background-color: #4958b6;
+}
+
+.extraInfoDivs {
+    width: 50%;
+    background-color: cornflowerblue;
+}
+
+.classes {
+    border: black solid 3px;
+    margin: auto;
+    padding: 2px;
+}
+
+.button {
+    background-color: blue;
+    color: white;
+    width: 90%;
+    margin: 5px auto;
+}
+
+#menu {
+    align-self: flex-start;
+}
+
+.pokemon, .button, .classes, .extraInfoDivs, #extraInfo, .column {
+    border-radius: 5px;
+}
+
+@media (max-width: 1000px) {
+    #content {
+        width: 99%;
+    }
+}
+
+@media (max-width: 900px) {
+    #content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .column {
+        margin: 5px;
+    }
+
+    #hamburger {
+        display: block;
+        grid-area: hamburger;
+    }
+
+    #rightNav {
+        display: none;
+    }
+
+    #home {
+        margin: auto;
+        grid-area: home;
+    }
+
+    #nav {
+        display: grid;
+        grid-template-columns: 1fr 7fr 1fr;
+        grid-template-areas: ". home hamburger";
+    }
+}
