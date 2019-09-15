@@ -18,7 +18,7 @@ window.addEventListener("load", function() {
     }
 
     if (localStorage.getItem("time").valueOf() - time.getTime() >= (4 * 60 * 60 * 1000)) {
-        localStorage.setItem("randomPokemon", null);
+        loadRandomPokemonOfTheDay();
     }
 
     if ((localStorage.getItem("randomPokemon") === null)) {
